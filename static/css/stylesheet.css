@@ -1,6 +1,7 @@
-body{
+body {
+  display: grid;
   font-family: sans-serif;
-  font-size:1rem;
+  font-size: 1rem;
   margin-left: 5%;
   margin-right: 5%;
   color: white;
@@ -8,14 +9,34 @@ body{
   background-image: url(../Images/darkbg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 3em;
+}
+
+body h3 {
+  font-size: 1em;
+}
+
+body h2 {
+  font-size: 2em;
+}
+
+body a {
+  text-decoration: none;
+  color: lightblue;
 }
 
 a {
   color: blue;
 }
 
+section {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
 
-footer {
+.mainFooter {
+  grid-column-start: 1;
+  grid-column-end: 4;
   background-color: rgba(35, 35, 35, 0.7);
   text-align: center;
   padding: 1%;
@@ -47,11 +68,14 @@ h2 {
 }
 
 .mainHeader {
+  grid-column-start: 1;
+  grid-column-end: 4;
   display: flex;
   flex-direction: column;
-  color:white;
+  color: white;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
   position: relative;
   border-style: groove;
   border-width: 1px;
@@ -66,12 +90,15 @@ h2 {
   font-stretch: expanded;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
-  transition: 1s;
-  transform-origin: left;
-  transform: scaleX(1);
+}
+
+.mainHeader h3 {
+  font-size: 3rem;
 }
 
 .menu {
+  grid-column-start: 1;
+  grid-column-end: 4;
   position: relative;
   display: flex;
   flex: auto;
@@ -81,12 +108,12 @@ h2 {
   top: 10px;
   bottom: 10px;
   left: 10px;
-  padding: 0;
   background: rgba(36, 36, 36, 0.8);
   border-radius: 10px;
   box-sizing: initial;
   width: 100%;
   font-family: sans-serif;
+  /* font-size: 2em; */
 }
 
 .menu ul li a {
@@ -124,12 +151,12 @@ h2 {
 
 .contactDetails {
   display: relative;
-  width: 3em;
+  width: 2em;
 }
 
 
 .navHeading {
-  margin: 2%; 
+  margin: 2%;
   color: white;
 }
 
@@ -201,18 +228,22 @@ h2 {
     visibility: hidden;
     opacity: 0;
   }
+
   20% {
     visibility: hidden;
     opacity: 0;
   }
+
   40% {
     visibility: hidden;
     opacity: 0;
   }
+
   90% {
     visibility: hidden;
     opacity: 0;
   }
+
   100% {
     visibility: visible;
     opacity: 1;
@@ -231,41 +262,50 @@ h2 {
   }
 }
 
-@media (min-width: 600px) {
-  body{
+@media (min-device-width: 600px) {
+  body {
     background-color: white;
     background-image: url(../Images/lightbg.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
-    margin-left: 20%;
+    font-size: 2rem;
   }
 
   .navHeading {
-    margin: 10%; 
+    margin: 10%;
     color: white;
   }
-  
+
+  .contactDetails {
+    width: 3em;
+  }
+
+  .mainHeader {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
 
   .menu {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: block;
-    position: fixed;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    padding: 0;
+    position: relative;
+    width: 80%;
     background: rgba(36, 36, 36, 0.8);
     border-radius: 10px;
     box-sizing: initial;
-    width: 15%;
     font-family: sans-serif;
+    font-size: 1em;
   }
-  
+
   .menu ul li {
     position: relative;
     list-style: none;
   }
-  
+
   .menu ul li a {
     position: relative;
     color: white;
@@ -275,7 +315,7 @@ h2 {
     text-decoration: none;
     margin: 10px;
   }
-  
+
   .menu ul li a:hover {
     color: black;
     margin-left: 20px;
@@ -289,5 +329,46 @@ h2 {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
   }
-  
+
+  .mainFooter {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  } 
+
+  section {
+    grid-column-start: 2;
+    grid-column-end: 4;  
+  }
+}
+
+@media (min-width:1000px) {
+  body {
+    background-color: white;
+    background-image: url(../Images/lightbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-size: 2rem;
+  }
+
+  section {
+    grid-column-start: 2;
+    grid-column-end: 4;  
+  }
+
+  .menu {
+    width: 80%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .mainHeader {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .mainFooter {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
 }
