@@ -106,7 +106,6 @@ footer .contactDetails:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: black;
   }
 
   .__breadcrumb {
@@ -126,9 +125,13 @@ footer .contactDetails:hover {
 
 @media (min-width:1000px) and (min-device-width:1000px) {
   body {
-    color: black;
     background-image: url(../../Images/bg.jpg);
+    background-repeat: none;
     background-size: cover;
     background-attachment: fixed;
+  }
+
+  footer {
+    color: black;
   }
 }
