@@ -24,13 +24,21 @@ body {
   font-size: 1.5rem;
 }
 
+.overflowy-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .carousel-content-container {
   width: 20rem;
   height: 20rem;
 }
 
 .aside-wrapper {
-  top: 10rem;
+  top: 2rem;
   position: sticky;
 }
 
