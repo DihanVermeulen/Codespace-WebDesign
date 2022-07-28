@@ -1,1 +1,1 @@
-This is the 8th resume challenge of Codespace Academy.
+This is the 10th resume project of Codespace Academy

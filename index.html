@@ -1,150 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Dihan Vermeulen's Resumé</title>
-  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="src/styles/css/stylesheet.css">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/4e581bf954.js" crossorigin="anonymous"></script>
+    <title>Dihan Vermeulen's Resume</title>
 </head>
 
-<body class=" my-sm-3">
+<body>
 
-  <header class="mainHeader p-sm-3">
-      <h1 class="m-sm-5">Dihan Vermeulen</h1>
-      <div class="borderFrame m-sm-3">
-        <picture> 
-          <source media="(max-width:650px)" srcset="../static/Images/ProfilePic-small.png">
-          <source media="(max-width:1000px)" srcset="../static/Images/ProfilePic-medium.png">
-          <image src="../static/Images/ProfilePic-Large.png" alt="Profile Picture" class="profilePic"></image>
-        </picture>
-      </div>
-      <h3>Software Developer at TechQ Development</h3>
-      <p>
-        The world of tech excites me and motivates me to learn more.
-      </p>
-  </header>
-
-  <nav class="mt-sm-3 mb-sm-5 col-sm menu p-sm-3">
-      <header>
-        <h3 class="navHeading">Navigation</h3>
-      </header>
-      <ul>
-        <div class="toolTip">
-          <span class="tooltipText">Click to navigate</span>
-          <li> <a href="#education"> Education </a> </li>
+    <!-- Main navbar that is attached to the top and has a fixed position -->
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item mx-md-5 mx-lg-5">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="fa-solid fa-house"></i>Home</a>
+                    </li>
+                    <li class="nav-item dropdown mx-md-5">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-location-arrow"></i>Navigation
+                        </a>
+                        <ul class="dropdown-menu mb-0">
+                            <li><a class="dropdown-item" href="#education">Education</a></li>
+                            <li><a class="dropdown-item" href="#experience">Experience</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="about.html">More about me</a></li>
+                            <li><a class="dropdown-item" href="#contact">Contact me</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="toolTip">
-          <span class="tooltipText">Click to navigate</span>
-          <li> <a href="#experience"> Experience </a> </li>
-        </div>
-        <div class="toolTip">
-          <span class="tooltipText">Click to navigate</span>
-          <li> <a href="#skills"> Skills </a> </li>
-        </div>
-        <div class="toolTip">
-          <span class="tooltipText">Click to navigate</span>
-          <li> <a href="#interests"> Interests </a> </li>
-        </div>
-        <div class="toolTip">
-          <span class="tooltipText">Click to navigate</span>
-          <li> <a href="#contact"> Contact Details </a> </li>
-        </div>
-      </ul>
-  </nav>
+    </nav>
 
-  <section>
+    <!-- Breadcrumb trail for the website -->
+    <nav class="__breadcrumb position-absolute mx-4" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
 
-    <header>
-      <h2 id="education">Education</h2>
-    </header>
+    <!-- Container where the main content of the page is placed -->
+    <div class="container-fluid">
 
-    <article>
-      <h3> Codespace Academy </h3>
-      <p>
-        At the moment I am studying at Codespace Academy and doing their <em> <a
-          href="https://www.codespace.co.za/courses/software-engineering/" target="_blank">Software Engineering</a> </em>
-        course
-        to broaden my knowledge of the world wibe web, as well as learning extra skills to help me
-        on my road in development.
-      </p>
-    </article>
+        <!-- Main header of the current page -->
+        <header>
+            <div class="row my-3">
+                <div class="jumbotron text-light text-center my-sm-5">
+                    <h1 class="display-4">Dihan Vermeulen</h1>
+                    <p class="lead">Software Engineering student at Codespace</p>
+                    <picture>
+                        <source media="(max-width:650px)" srcset="src/Images/ProfilePic-small.png">
+                        <source media="(max-width:1000px)" srcset="src/Images/ProfilePic-medium.png">
+                        <image src="src/Images/ProfilePic-Large.png" alt="Profile Picture" class="profilePic"></image>
+                    </picture>
+                    <hr class="my-4">
+                    <p> Please find my resume below and I hope it finds you well.
+                    </p>
+                </div>
+            </div>
+        </header>
 
-    <header>
-      <h3> Harvard Artificial Intelligence </h3>
-    </header>
+        <!-- Space where the cards are placed -->
+        <main>
+            <article>
+                <div class="row m-3">
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">Codespace Academy</strong>
+                                <div class="mb-1 text-muted">2022</div>
+                                <p class="card-text mb-auto text-light">Here at Codespace Academy I am being taught the
+                                    fundamentals of web development, as well as how I can further my learning in my
+                                    coding journey to improve myself as well as to be a better employee.
+                                </p>
+                                <a href="https://www.codespace.co.za/" target="_blank" class="stretched-link">Find out
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-success">Github</strong>
+                                <p class="mb-auto text-light">Take a look at my Github to see all my projects</p>
+                                <a href="#" class="stretched-link">Click here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-    <article>
-      <p>
-        I am doing one of Harvard's CS50 courses on artifial intelligence where we are being taught on how to
-        use Python to write artificial intelligence programs.
-      </p>
-    </article>
+            <!-- Row where main section as well as aside is placed -->
+            <div class="row mx-3 g-5">
 
-    <header>
-      <h2 id="experience">Experience</h2>
-    </header>
+                <!-- Section is placed here -->
+                <div class="col-md-8">
+                    <section class="text-light">
+                        <h2 class=" fw-bold" id="education">Education</h2>
+                        <hr>
+                        <h3 class="fw-lighter">Codespace Academy</h3>
+                        <p>Student at Codespace Academy busy with their
+                            <a class="text-decoration-none link-info"
+                                href="https://www.codespace.co.za/courses/software-engineering/"
+                                target="_blank">Software
+                                Engineering course</a>.
+                        </p>
+                        <p>
+                            Certificate in:
+                        <ul>
+                            <li>Intro To Web</li>
+                        </ul>
+                        </p>
+                        <h3>Harvard</h3>
+                        <p class="mb-5">I am doing one of Harvard's CS50 courses in artificial intelligence
+                            where we use Python to incorporate artificial intelligence in our programs.
+                        </p>
+                        <h2 class="text-light fw-bold" id="experience">Experience</h2>
+                        <hr class="text-light">
+                        <h3 class="text-light fw-lighter">TechQ Development</h3>
+                        <p class="text-light mb-5">At TechQ Development I worked as a draughter, but changed roles when
+                            there
+                            was a need for a way to improve the proficiency at what the work was done at. I started to
+                            develop a program for them to improve their workflow and I aslo worked as their technician.
+                        </p>
+                        <h2 class="text-light fw-bold" id="skills">Skills</h2>
+                        <hr class="text-light">
+                        <ul>
+                            <li>Python</li>
+                            <li>NodeJS</li>
+                            <li>Angular</li>
+                            <li>Typescript</li>
+                            <li>AutoCad</li>
+                            <li>Revit</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </section>
+                </div>
 
-    <article>
-      <h3 id="job1"> TechQ Development </h3>
-      <p>
-        <a href="https://www.techq-development.com/" target="_blank">TechQ Development</a> is a Civil Engineering
-        consultancy company. Here I worked as a software developer as well as a technician to help
-        make their workflow more efficient.
-      </p>
-    </article>
+                <!-- Aside content with form -->
+                <div class="col-md-4">
+                    <aside class="text-light" id="contact">
+                        <div class="position-sticky">
+                            <div class="border">
+                                <div class="p-4 border-bottom">
+                                    <h2>Contact me</h2>
+                                    <p>
+                                        If you would like to get in contact with me, please fill out this form.
+                                    </p>
+                                </div>
+                                <div>
+                                    <div class="p-4">
+                                        <form>
+                                            <div class="row text-dark">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput"
+                                                            required>
+                                                        <label for="floatingInput">First Name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-floating">
+                                                        <input type="text" class="form-control" id="floatingPassword"
+                                                            required>
+                                                        <label for="floatingInput">Last Name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-    <header>
-      <h2 id="skills">Skills</h2>
-    </header>
+                                            <div class="input-group my-3">
+                                                <input type="text" class="form-control" placeholder="email"
+                                                    aria-label="email" aria-describedby="basic-addon2" required>
+                                                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                                            </div>
 
-    <article>
-      <ul>
-        <li> HTML </li>
-        <li> CSS </li>
-        <li> Javascript </li>
-        <li> Typescript </li>
-        <li> Python </li>
-        <li> Angular </li>
-        <li> NodeJS </li>
-      </ul>
-    </article>
+                                            <div class="form-floating text-dark">
+                                                <textarea class="form-control" placeholder="Leave a comment here"
+                                                    id="floatingTextarea"></textarea>
+                                                <label for="floatingTextarea">Comments</label>
+                                            </div>
 
-    <header>
-      <h2 id="interests">Interests</h2>
-    </header>
-
-    <article>
-      <ul>
-        <li>Technology</li>
-        <li>Drawing</li>
-        <li>Learning new skills</li>
-      </ul>
-    </article>
-
-  </section>
-
-  <footer class="mainFooter col">
-    <h1 id="contact">Contact Details</h1>
-    <p>
-      email: dihan.vermeulen12@gmail.com
-    </p>
-    <p>
-      phone: (+27) 72 693 3322
-    </p>
-    <a href="https://www.linkedin.com/" target="_blank">
-      <image class="contactDetails" src="../static/Images/linkedin.png"></image>
-    </a>
-    <a href="https://www.facebook.com/" target="_blank">
-      <image class="contactDetails" src="../static/Images/facebook.png"></image>
-    </a>
-    <a href="https://mail.google.com/mail/u/0" target="_blank">
-      <image class="contactDetails" src="../static/Images/gmail.png"></image>
-    </a>
-  </footer>
-
-  <script src="static/bootstrap/js/bootstrap.bundle.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary my-3">Contact
+                                                    me</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
